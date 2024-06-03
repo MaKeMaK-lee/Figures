@@ -49,5 +49,14 @@
 
             return false;
         }
+
+        /// <summary>
+        /// Создаёт эллипс на основе имеющегося эллипса
+        /// </summary>
+        /// <param name="example">Эллипс-образец</param>
+        public Ellipse(Ellipse example) : this(example.a, example.b)
+        {
+
+        }
     }
 }

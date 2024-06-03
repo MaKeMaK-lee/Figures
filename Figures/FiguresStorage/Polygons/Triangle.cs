@@ -28,5 +28,14 @@ namespace Figures.FiguresStorage.Polygons
 
             return false;
         }
+
+        /// <summary>
+        /// Создаёт треугольник на основе имеющегося треугольника
+        /// </summary>
+        /// <param name="example">Треугольник-образец</param>
+        public Triangle(Triangle example) : this([.. example.sides])
+        {
+
+        }
     }
 }

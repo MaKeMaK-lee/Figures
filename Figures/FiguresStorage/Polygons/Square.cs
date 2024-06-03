@@ -38,5 +38,14 @@ namespace Figures.FiguresStorage.Polygons
         {
 
         }
+
+        /// <summary>
+        /// Создаёт квадрат на основе имеющегося квадрата
+        /// </summary>
+        /// <param name="example">Квадрат-образец</param>
+        public Square(Square example) : this([.. example.sides])
+        {
+
+        }
     }
 }

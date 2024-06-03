@@ -39,5 +39,14 @@ namespace Figures.FiguresStorage.Polygons
         {
 
         }
+
+        /// <summary>
+        /// Создаёт прямоугольник на основе имеющегося прямоугольника
+        /// </summary>
+        /// <param name="example">Прямоугольник-образец</param>
+        public Rectangle(Rectangle example) : this([.. example.sides])
+        {
+
+        }
     }
 }

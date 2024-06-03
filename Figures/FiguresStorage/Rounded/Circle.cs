@@ -1,4 +1,6 @@
-﻿namespace Figures.FiguresStorage.Rounded
+﻿using Figures.FiguresStorage.Polygons;
+
+namespace Figures.FiguresStorage.Rounded
 {
     /// <summary>
     /// Представляет круг
@@ -40,6 +42,15 @@
                 return true;
 
             return false;
+        }
+
+        /// <summary>
+        /// Создаёт круг на основе имеющегося круга
+        /// </summary>
+        /// <param name="example">Круг-образец</param>
+        public Circle(Circle example) : this(example.r)
+        {
+
         }
     }
 }

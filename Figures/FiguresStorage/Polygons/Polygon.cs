@@ -79,10 +79,13 @@ namespace Figures.FiguresStorage.Polygons
         /// Создаёт многоугольник на основе имеющихся сторон (достраивает одну сторону, если они не замкнуты)
         /// </summary>
         /// <param name="sides">Последовательный набор сторон в формате векторов</param>
-        public Polygon(IEnumerable<Vector2> sides)
-        {
-            this.sides = Vector2Utilities.SureCycled(sides).ToList();
-        }
+        public Polygon(IEnumerable<Vector2> sides) => this.sides = Vector2Utilities.SureCycled(sides).ToList();
+
+        /// <summary>
+        /// Создаёт многоугольник на основе имеющегося многоугольника
+        /// </summary>
+        /// <param name="example">Многоугольник-образец</param>
+        public Polygon(Polygon example) => sides = [.. example.sides];
 
         /// <summary>
         /// Рассчитывает набор сторон вершин многоугольника

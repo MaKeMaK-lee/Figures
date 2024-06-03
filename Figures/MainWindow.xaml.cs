@@ -69,6 +69,15 @@ namespace Figures
 
             }).Where(f => f.Validate());
 
+            figures = figures.Append(new Polygon(figures.FirstOrDefault(f => f as Polygon != null, new Polygon([])) as Polygon));
+            figures = figures.Append(new Polygon(figures.FirstOrDefault(f => f as Polygon != null, new Polygon([])) as Polygon));
+            figures = figures.Append(new Polygon(figures.FirstOrDefault(f => f as Polygon != null, new Polygon([])) as Polygon));
+            figures = figures.Append(new Polygon(figures.FirstOrDefault(f => f as Rectangle != null, new Rectangle([])) as Rectangle));
+            figures = figures.Append(new Circle(figures.FirstOrDefault(f => f as Circle != null, new Circle(0)) as Circle));
+            figures = figures.Append(new Circle(figures.FirstOrDefault(f => f as Circle != null, new Circle(0)) as Circle));
+            figures = figures.Append(new Circle(figures.FirstOrDefault(f => f as Circle != null, new Circle(0)) as Circle));
+            figures = figures.Where(f => f.Validate());
+
             Debug.WriteLine("Figures:\n");
             foreach (var polygon in figures)
             {

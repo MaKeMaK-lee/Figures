@@ -42,6 +42,15 @@ namespace Figures.FiguresStorage.Polygons
         }
 
         /// <summary>
+        /// Создаёт прямоугольный треугольник на основе имеющегося прямоугольного треугольника
+        /// </summary>
+        /// <param name="example">Прямоугольный треугольник-образец</param>
+        public TriangleRight(TriangleRight example) : this([.. example.sides])
+        {
+            
+        }
+
+        /// <summary>
         /// Меняет местами стороны в списке так, чтобы катеты были на позициях 0 и 1 
         /// </summary>
         private void MoveSides()
