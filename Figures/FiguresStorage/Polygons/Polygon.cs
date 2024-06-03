@@ -9,6 +9,9 @@ namespace Figures.FiguresStorage.Polygons
     /// </summary>
     public class Polygon : IPolygon
     {
+        /// <summary>
+        /// Упорядоченный набор сторон многоугольника, представленный в виде векторов
+        /// </summary>
         protected IList<Vector2> sides;
 
         public IEnumerable<Vector2> Sides => sides.Where(s => true);

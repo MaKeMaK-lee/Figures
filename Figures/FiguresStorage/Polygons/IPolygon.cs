@@ -9,7 +9,7 @@ namespace Figures.FiguresStorage.Polygons
     public interface IPolygon : IFigure
     {
         /// <summary>
-        /// Получает набор сторон многоугольника 
+        /// Получает упорядоченный набор сторон многоугольника, представленный в виде векторов 
         /// </summary>
         IEnumerable<Vector2> Sides
         {
